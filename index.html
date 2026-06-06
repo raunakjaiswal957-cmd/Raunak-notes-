@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raunak Notes - Class 10 Ultimate Network</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background: linear-gradient(135deg, #0f172a, #1e1b4b); color: #f8fafc; min-height: 100vh; padding: 25px 15px; display: flex; justify-content: center; align-items: center; }
+        .dashboard { width: 100%; max-width: 650px; background: rgba(30, 41, 59, 0.7); padding: 30px 20px; border-radius: 20px; backdrop-filter: blur(10px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); text-align: center; }
+        
+        .profile-area img { width: 90px; height: 90px; border-radius: 50%; border: 3px solid #3b82f6; margin-bottom: 15px; box-shadow: 0 0 15px rgba(59,130,246,0.5); object-fit: cover; }
+        .profile-area h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; color: #fff; letter-spacing: 0.5px; }
+        .profile-area p { font-size: 14px; color: #94a3b8; margin-bottom: 25px; line-height: 1.5; }
+        
+        .section-title { font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: #3b82f6; font-weight: bold; margin: 25px 0 12px 0; text-align: left; padding-left: 5px; }
+        
+        .grid-links { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+        @media (max-width: 480px) { .grid-links { grid-template-columns: 1fr; } }
+        
+        .link-card { display: flex; align-items: center; justify-content: center; padding: 16px; background: rgba(51, 65, 85, 0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; color: #fff; text-decoration: none; font-weight: 600; font-size: 15px; transition: all 0.3s ease; }
+        .link-card:hover { background: #3b82f6; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(59,130,246,0.4); }
+        
+        .social-links { display: flex; flex-direction: column; gap: 12px; }
+        .social-btn { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-radius: 12px; color: white; text-decoration: none; font-weight: bold; font-size: 16px; transition: all 0.3s; }
+        .social-btn span { font-size: 18px; display: flex; align-items: center; gap: 10px; }
+        
+        .yt { background: #dc2626; box-shadow: 0 4px 10px rgba(220,38,38,0.3); }
+        .yt:hover { background: #b91c1c; transform: scale(1.02); }
+        .tg { background: #2563eb; box-shadow: 0 4px 10px rgba(37,99,235,0.3); }
+        .tg:hover { background: #1d4ed8; transform: scale(1.02); }
+        .ig { background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7); box-shadow: 0 4px 10px rgba(238,42,123,0.3); }
+        .ig:hover { transform: scale(1.02); opacity: 0.95; }
+        
+        .footer { margin-top: 30px; font-size: 12px; color: #64748b; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+
+<div class="dashboard">
+    <div class="profile-area">
+        <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=150" alt="Education Hub">
+        <h1>Raunak Notes 🎓</h1>
+        <p>Hamari saari websites, study materials aur social channels ek hi jagah par!</p>
+    </div>
+        <!-- OUR WEBSITES SECTION -->
+    <div class="section-title">🌐 Our Live Portals (Websites)</div>
+    <div class="grid-links">
+        <!-- Maths Website -->
+        <a href="https://raunakjaiswal957-cmd.github.io/Maths-notes-/" target="_blank" class="link-card">📐 Maths Pro Portal</a>
+        
+        <!-- Science Website -->
+        <a href="https://raunakjaiswal957-cmd.github.io/Science-/" target="_blank" class="link-card">🔬 Science Hub</a>
+        
+        <!-- Coding Website -->
+        <a href="https://raunakjaiswal957-cmd.github.io/Coding-notes-/" target="_blank" class="link-card">💻 Coding Bootcamp</a>
+        
+        <!-- PYQ & Sample Paper Website -->
+        <a href="https://raunakjaiswal957-cmd.github.io/10-class-pyq-and-samples-paper-" target="_blank" class="link-card">📝 Board PYQs & Papers</a>
+        
+        <!-- Strawberry Master Hub Website (Full Row) -->
+        <a href="https://raunakjaiswal957-cmd.github.io/Strawberry-notes/" target="_blank" class="link-card" style="grid-column: span 2; background: rgba(59, 130, 246, 0.2); border-color: #3b82f6;">🚀 All-In-One Master Notes Hub</a>
+                                                                                                                                                  </div>
+                                                                                                                                                      <!-- SOCIAL MEDIA CHANNELS -->
+    <div class="section-title">📱 Connect On Social Media</div>
+    <div class="social-links">
+        <!-- YouTube Button -->
+        <a href="https://www.youtube.com/@RaunakJaiswal-d2l" target="_blank" class="social-btn yt">
+            <span>📺 YouTube Channel</span> ➡️
+        </a>
+        <!-- Telegram Button -->
+        <a href="https://t.me/Shinobi_Bankai" target="_blank" class="social-btn tg">
+            <span>📢 Telegram Community</span> ➡️
+        </a>
+        <!-- Instagram Button -->
+        <a href="https://www.instagram.com/buaranree?igsh=MW80NGhtZGxsdXVxZA==" target="_blank" class="social-btn ig">
+            <span>📸 Instagram Handle</span> ➡️
+        </a>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 Raunak Notes Network. Made with ❤️</p>
+    </div>
+</div>
+
+</body>
+</html>
