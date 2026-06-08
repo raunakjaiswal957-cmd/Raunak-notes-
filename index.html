@@ -76,16 +76,70 @@
     <span>📢 Telegram Community</span>
 </a>
 
-<div style="background: rgba(255, 255, 255, 0.05); border-left: 3px solid #00eeff; padding: 10px; margin-top: 10px; border-radius: 4px; text-align: left;">
-    <div style="color: #00eeff; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 3px;">
-        🤖 Raunak AI Assistant Notice:
+<div style="background: rgba(255, 255, 255, 0.05); border-left: 3px solid #00eeff; padding: 15px; margin-top: 15px; border-radius: 8px; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+    
+    <div style="color: #00eeff; font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; display: flex; align-items: center; gap: 5px;">
+        <span>🤖</span> Raunak AI Chat Assistant
     </div>
-    <p style="color: #ff4d4d; font-size: 13px; margin: 0; font-weight: 500; line-height: 1.4;">
-        Sorry, hamari telegram channel page open nahi ho paegi.
+    
+    <p style="color: #ff4d4d; font-size: 13px; margin: 0 0 10px 0; font-weight: 500; line-height: 1.4;">
+        ⚠️ Sorry, hamari telegram channel page direct open nahi ho paegi.
     </p>
-    <div style="color: #ffffff; font-size: 12px; margin-top: 5px;">
-        💡 <strong>AI Solution:</strong> Telegram App kholein aur search karein: <strong style="color: #00eeff; background: rgba(0, 238, 255, 0.1); padding: 2px 6px; border-radius: 3px;">raunak_notes_10</strong>
+
+    <div id="ai-chat-screen" style="background: rgba(0, 0, 0, 0.3); border-radius: 6px; padding: 10px; min-height: 60px; max-height: 150px; overflow-y: auto; font-size: 13px; color: #ffffff; margin-bottom: 10px; border: 1px solid rgba(255,255,255,0.1);">
+        <p style="margin: 0; color: #00eeff;"><strong>AI:</strong> Hello! Main Raunak AI hoon. Aap mujhse koi bhi sawaal puch sakte hain. 👇</p>
     </div>
+
+    <div style="display: flex; gap: 5px;">
+        <input type="text" id="ai-user-input" placeholder="Apna sawaal yahan likhein..." style="flex: 1; background: rgba(255,255,255,0.1); border: 1px solid rgba(0,238,255,0.3); padding: 8px; border-radius: 4px; color: #ffffff; font-size: 13px; outline: none;">
+        <button onclick="askRaunakAI()" style="background: #00eeff; color: #000000; border: none; padding: 8px 15px; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 13px;">Ask</button>
+    </div>
+</div>
+
+<script>
+function askRaunakAI() {
+    var inputField = document.getElementById("ai-user-input");
+    var chatScreen = document.getElementById("ai-chat-screen");
+    var userText = inputField.value.trim().toLowerCase();
+
+    if (userText === "") return;
+
+    // User message display
+    chatScreen.innerHTML += "<p style='margin: 5px 0; color: #ffffff;'><strong>You:</strong> " + inputField.value + "</p>";
+    
+    // AI Thinking Response
+    var aiResponse = "Mai aapka sawaal samajh gaya hoon. Study materials ke liye upar diye gaye Maths, Science ya Coding Portal par click karein. Agar Telegram join karna hai toh App par jaakar '<strong>raunak_notes_10</strong>' search karein.";
+
+    // Custom Keyword Matching
+    if (userText.includes("telegram") || userText.includes("link") || userText.includes("join")) {
+        aiResponse = "<strong>AI:</strong> Telegram link par error hai. Aap direct Telegram App kholkar search karein: <span style='color:#00eeff; font-weight:bold;'>raunak_notes_10</span> aur channel join kar lein!";
+    } else if (userText.includes("notes") || userText.includes("study") || userText.includes("pdf")) {
+        aiResponse = "<strong>AI:</strong> Saare notes bilkul free hain! Upar scroll karein aur Maths Website, Science Website, ya PYQ Portal ke button par click karein.";
+    } else if (userText.includes("youtube") || userText.includes("video")) {
+        aiResponse = "<strong>AI:</strong> Aap upar scroll karke 'YouTube Channel' button par click karke hamari latest educational videos dekh sakte hain.";
+    } else if (userText.includes("hello") || userText.includes("hi") || userText.includes("hey")) {
+        aiResponse = "<strong>AI:</strong> Hello bhai! Main Raunak AI Assistant hoon. Aapko kis subject ke notes ya help chahiye, batao?";
+    } else if (userText.includes("code") || userText.includes("coding")) {
+        aiResponse = "<strong>AI:</strong> Coding ke premium notes aur tutorials ke liye upar diye gaye 'Coding Website' button par click karein.";
+    }
+
+    // AI response display
+    setTimeout(function() {
+        chatScreen.innerHTML += "<p style='margin: 5px 0; color: #00eeff;'>" + aiResponse + "</p>";
+        chatScreen.scrollTop = chatScreen.scrollHeight; // Auto-scroll to bottom
+    }, 400);
+
+    inputField.value = ""; // Clear input
+}
+
+// Allow Enter Key to Submit
+document.getElementById("ai-user-input").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        askRaunakAI();
+    }
+});
+</script>
+        
 </div class="footer">
         <p>© 2026 Raunak Notes Network. Made with ❤️</p>
     </div>
